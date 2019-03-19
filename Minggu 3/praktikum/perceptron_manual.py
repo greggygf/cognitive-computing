@@ -12,11 +12,11 @@ bias = np.random.random_sample()
 weight = np.random.random_sample((4,)).astype(float)
 
 perulangan = 1000
-# learning_rate = 0.8
+learning_rate = 0.8
 
 # Tugas 4
 
-learning_rate = 0.1
+# learning_rate = 0.1
 
 # mengatur path sesuai dengan path csv
 path = str(
@@ -42,21 +42,21 @@ def Preprocess(dataIris):
 # Fungsi aktivasi dengan hard limit
 
 
-# def FungsiAktivasi(y):
-#     if (y > 0):
-#         return 1
-#     elif(y <= 0):
-#         return 0
-
-# Tugas 2 - Fungsi Aktivasi dengan symetric hard limit
-
 def FungsiAktivasi(y):
     if (y > 0):
         return 1
-    elif(y == 0):
+    elif(y <= 0):
         return 0
-    else:
-        return -1
+
+# Tugas 2 - Fungsi Aktivasi dengan symetric hard limit
+
+# def FungsiAktivasi(y):
+#     if (y > 0):
+#         return 1
+#     elif(y == 0):
+#         return 0
+#     else:
+#         return -1
 
 
 # data training dan testing diubah kedalam bentuk float
